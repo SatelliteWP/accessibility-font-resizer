@@ -13,7 +13,7 @@ Make accessibility better for your visitors by enabling them to resize the text 
 
 Would you like to enable all your visitors to enjoy your site? Not all visitors sees your website the way you do.
 
-This plugin allows you to make your website easier to read by  to give the visitors of your site the option to change the font size of your text.
+This plugin allows you to make your website easier to read and give the visitors of your site the option to change the font size of your text.
 
 Benefits:
 
