@@ -1,4 +1,4 @@
-# accessibility-font-resizer
+# Accessibility Font Resizer
 Make accessibility better for your visitors by enabling them to resize the text on your website and make it bigger.
 
 ## Description
