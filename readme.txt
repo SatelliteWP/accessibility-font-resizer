@@ -4,7 +4,7 @@ Tags: font size, text size, text resizer, font resizer, accessibility, font resi
 Requires at least: 4.9
 Tested up to: 5.1
 Stable tag: 1.0.2
-Requires PHP: 7.1
+Requires PHP: 7.0
 License: GPLv3
 
 Make accessibility better for your visitors by enabling them to resize the text on your website and make it bigger.
