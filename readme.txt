@@ -87,5 +87,11 @@ There is no shortcode for this plugin. You can call CSS classes directly without
 
 == Changelog ==
 
+= 1.0.2 =
+* Remove renamed file that cause plugin to install twice
+
+= 1.0.1 =
+* Fix version error
+
 = 1.0.0 =
 * First stable version
