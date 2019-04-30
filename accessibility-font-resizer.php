@@ -4,7 +4,7 @@
  * Plugin URI: https://www.satellitewp.com/accessibility-font-resizer
  * Description: Make accessibility better for your visitors by enabling them to resize the text on your website and make it bigger.
  * Author: SatelliteWP
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: https://www.satellitewp.com
  * Text Domain: accessibility-font-resizer
  */
