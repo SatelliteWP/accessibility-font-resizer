@@ -1,9 +1,9 @@
 === Accessibility Font Resizer ===
-Contributors: maximejobin, satellitewp
+Contributors: satellitewp, maximejobin
 Tags: font size, text size, text resizer, font resizer, accessibility, font resize
 Requires at least: 4.9
 Tested up to: 5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 7.0
 License: GPLv3
 
@@ -86,6 +86,9 @@ There is no shortcode for this plugin. You can call CSS classes directly without
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Add debugging option in the settings
 
 = 1.0.2 =
 * Remove renamed file that cause plugin to install twice
