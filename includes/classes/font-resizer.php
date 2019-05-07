@@ -59,6 +59,7 @@ class Font_Resizer {
 		$html_tags = explode( "\n", str_replace( "\r", "", $text_tags ) );
 		?>
 		<script>
+			var afr_debug = <?php echo (get_option( 'afr_debug' ) == '1' ? 'true' : 'false' ); ?>; 
 			var afr_days = <?php echo get_option( 'afr_cookie_delay' ); ?>;
 			var afr_elems = <?php echo json_encode( $html_tags ); ?>;
 			var afr_sizes = [];
@@ -113,7 +114,7 @@ class Font_Resizer {
 			'swp_font_resizer',
 			'swp_font_resizer'
 		);
-		register_setting( 'swp_font_resizer', 'afr_elems', 'strval' );
+		register_setting( 'swp_font_resizer', 'afr_elems', array( 'type' => 'string' ) );
 
 		add_settings_field(
 			'afr_normal',
@@ -122,7 +123,7 @@ class Font_Resizer {
 			'swp_font_resizer',
 			'swp_font_resizer'
 		);
-		register_setting( 'swp_font_resizer', 'afr_normal', 'intval' );
+		register_setting( 'swp_font_resizer', 'afr_normal', array( 'type' => 'integer' ) );
 
 		add_settings_field(
 			'afr_large',
@@ -131,7 +132,7 @@ class Font_Resizer {
 			'swp_font_resizer',
 			'swp_font_resizer'
 		);
-		register_setting( 'swp_font_resizer', 'afr_large', 'intval' );
+		register_setting( 'swp_font_resizer', 'afr_large', array( 'type' => 'integer' ) );
 
 		add_settings_field(
 			'afr_xlarge',
@@ -140,7 +141,7 @@ class Font_Resizer {
 			'swp_font_resizer',
 			'swp_font_resizer'
 		);
-		register_setting( 'swp_font_resizer', 'afr_xlarge', 'intval' );
+		register_setting( 'swp_font_resizer', 'afr_xlarge', array( 'type' => 'integer' ) );
 
 		add_settings_field(
 			'afr_cookie_delay',
@@ -149,7 +150,16 @@ class Font_Resizer {
 			'swp_font_resizer',
 			'swp_font_resizer'
 		);
-		register_setting( 'swp_font_resizer', 'afr_cookie_delay', 'intval' );
+		register_setting( 'swp_font_resizer', 'afr_cookie_delay', array( 'type' => 'integer' ) );
+
+		add_settings_field(
+			'afr_debug',
+			__( 'Activate debug?', 'swp-font-resizer' ),
+			array( $this, 'debug_callback' ),
+			'swp_font_resizer',
+			'swp_font_resizer'
+		);
+		register_setting( 'swp_font_resizer', 'afr_debug', array( 'type' => 'boolean' ) );
 	}
 
 	/*
@@ -160,6 +170,7 @@ class Font_Resizer {
 	function resize_large_callback()	{ include( dirname( __FILE__ ) . '/../views/resize-large.php' ); }
 	function resize_xlarge_callback()	{ include( dirname( __FILE__ ) . '/../views/resize-xlarge.php' ); }
 	function cookie_callback()				{ include( dirname( __FILE__ ) . '/../views/cookie.php' ); }
+	function debug_callback()				{ include( dirname( __FILE__ ) . '/../views/debug.php' ); }
 
 	/**
 	 * Plugin activation
@@ -170,6 +181,7 @@ class Font_Resizer {
 		add_option( 'afr_large',        '110', '', 'no' );
 		add_option( 'afr_xlarge',       '120', '', 'no' );
 		add_option( 'afr_cookie_delay', '30',  '', 'no' );
+		add_option( 'afr_debug', 				'yes',  '', 'no' );
 	}
 
 	/**
@@ -187,5 +199,6 @@ class Font_Resizer {
 		delete_option( 'afr_large' );
 		delete_option( 'afr_xlarge' );
 		delete_option( 'afr_cookie_delay' );
+		delete_option( 'afr_debug' );
 	}
 }

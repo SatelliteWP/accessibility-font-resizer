@@ -14,19 +14,22 @@
 jQuery(document).ready(function($) {
     
     // Direct call to normal size
-    $('#afr_normal, .afr_normal').click(function(e) {
+    $('#afr_normal, .afr_normal, #afr-normal, .arf-normal').click(function(e) {
+        if (afr_debug) { console.log('AFR - Click normal size'); }
         afr(afr_sizes['n']);
         e.preventDefault();
     });
 
     // Direct call to large size
-    $('#afr_large, .afr_large').click(function(e) {
+    $('#afr_large, .afr_large, #afr-large, .afr-large').click(function(e) {
+        if (afr_debug) { console.log('AFR - Click large size'); }
         afr(afr_sizes['l']);
         e.preventDefault();
     });
 
     // Direct call to very large size
-    $('#afr_xlarge, .afr_xlarge').click(function(e) {
+    $('#afr_xlarge, .afr_xlarge, #afr-xlarge, .afr-xlarge').click(function(e) {
+        if (afr_debug) { console.log('AFR - Click very large size'); }
         afr(afr_sizes['xl']);
         e.preventDefault();
     });
@@ -48,7 +51,6 @@ jQuery(document).ready(function($) {
  * @param {boolean} setup Setup time ?
  */
 function afr(size, setup) {
-    debug = false;
     setup = (typeof setup == 'undefined') ? false : setup;
 
     if (typeof size == 'undefined') return;
@@ -62,7 +64,7 @@ function afr(size, setup) {
             if (setup) {
                 var ofs = jQuery(tags[ j ]).css('font-size');
                 jQuery(tags[ j ]).attr('data-swp-font-size', ofs);
-                if (debug) console.log('Original font size: ' + ofs);
+                if (afr_debug) console.log('Original font size: ' + ofs);
             }
             else {
                 var sfs = jQuery(tags[ j ]).attr('data-swp-font-size');
@@ -70,7 +72,7 @@ function afr(size, setup) {
                 var old_size = jQuery(tags[ j ]).css('font-size');
                 jQuery(tags[ j ]).css('font-size', new_size + "px");
 
-                if (debug) console.log('change from: ' + old_size + '. To: ' + new_size);
+                if (afr_debug) console.log('change from: ' + old_size + '. To: ' + new_size);
 
                 afr_sc('afr_size', size , afr_days);
             }
