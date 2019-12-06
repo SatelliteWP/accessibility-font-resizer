@@ -2,7 +2,7 @@
 Contributors: satellitewp, maximejobin
 Tags: font size, text size, text resizer, font resizer, accessibility, font resize
 Requires at least: 4.9
-Tested up to: 5.1
+Tested up to: 5.3
 Stable tag: 1.0.3
 Requires PHP: 7.0
 License: GPLv3
