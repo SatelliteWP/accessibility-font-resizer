@@ -48,7 +48,7 @@ CURRENTDIR=$(pwd)
 default_svnpath="/tmp/$PLUGINSLUG"
 default_svnurl="https://plugins.svn.wordpress.org/$PLUGINSLUG"
 default_svnuser="maximejobin"
-default_plugindir="$CURRENTDIR/"
+default_plugindir="$CURRENTDIR/src/"
 default_mainfile="$PLUGINSLUG.php"
 
 echo "Q2. Your local plugin root directory (the Git repo)."
@@ -241,6 +241,6 @@ echo
 echo "Removing temporary directory $SVNPATH."
 cd $SVNPATH
 cd ..
-#rm -fr $SVNPATH/
+rm -fr $SVNPATH/
 
 echo "*** FIN ***"
