@@ -14,7 +14,7 @@
 jQuery(document).ready(function($) {
     
     // Direct call to normal size
-    $('#afr_normal, .afr_normal, #afr-normal, .arf-normal').click(function(e) {
+    $('#afr_normal, .afr_normal, #afr-normal, .arf-normal, .afr-normal').click(function(e) {
         if (afr_debug) { console.log('AFR - Click normal size'); }
         afr(afr_sizes['n']);
         e.preventDefault();
