@@ -84,6 +84,9 @@ It's not a problem. The plugin works with all units!
 
 There is no shortcode for this plugin. You can call CSS classes directly without the need of a shortcode.
 
+= I found a bug =
+
+Oh no! We are really sorry about that. Please [report bugs here](https://github.com/SatelliteWP/accessibility-font-resizer/issues).
 
 == Changelog ==
 
