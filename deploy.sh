@@ -241,6 +241,6 @@ echo
 echo "Removing temporary directory $SVNPATH."
 cd $SVNPATH
 cd ..
-rm -fr $SVNPATH/
+#rm -fr $SVNPATH/
 
 echo "*** FIN ***"
