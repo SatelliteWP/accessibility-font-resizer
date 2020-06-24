@@ -2,9 +2,9 @@
 Contributors: satellitewp, maximejobin
 Tags: font size, text size, text resizer, font resizer, accessibility, font resize
 Requires at least: 4.9
-Tested up to: 5.3
+Tested up to: 5.4
 Stable tag: 1.0.3
-Requires PHP: 7.0
+Requires PHP: 7.2
 License: GPLv3
 
 Make accessibility better for your visitors by enabling them to resize the text on your website and make it bigger.
@@ -53,7 +53,7 @@ Once the plugin is activated, the functions of the plugin work.
 
 To be able to use the plugin, you should create a menu. You can use (or not) that menu in a widget.
 
-The trick is to simply add the CSS class `afr-normal` to display normal size, `afr-large` for large text and `aft-xlarge` for very large text.
+The trick is to simply add the CSS class `afr-normal` to display normal size, `afr-large` for large text and `afr-xlarge` for very large text.
 
 You can also apply this CSS technique in your PHP files or directly in your content.
 
